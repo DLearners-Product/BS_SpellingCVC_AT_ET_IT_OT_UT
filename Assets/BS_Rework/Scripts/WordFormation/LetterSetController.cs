@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+
 public class LetterSetController : MonoBehaviour
 {
     [SerializeField] private Image arrow;
@@ -11,27 +12,37 @@ public class LetterSetController : MonoBehaviour
     [SerializeField] private GameObject rightSlot;
     [SerializeField] private List<GameObject> middleLetters;
     [SerializeField] private AudioSource activityAS;
-    // [SerializeField] private AudioClip[] fullLetterClips;
-    // [SerializeField] private AudioClip combinedLetterClip;
-    private int leftLettersIndex,rightLettersIndex, middleLettersIndex;
-    private int letterindex;
+    [SerializeField] private AudioClip correctClip;
+    [SerializeField] private AudioClip wrongClip;
+    [SerializeField] private ParticleSystem slot_1;
+    [SerializeField] private ParticleSystem slot_2;
+
+    private int leftLettersIndex, rightLettersIndex, middleLettersIndex;
     private int lettercount = 0;
 
-    private void Start() 
+    private void Start()
     {
         middleLettersIndex = 0;
         leftLettersIndex = 0;
         rightLettersIndex = 0;
         arrow.gameObject.SetActive(true);
         StartCoroutine(ArrowAndSlotSwapRoutine());
-        
     }
+
     private IEnumerator ArrowAndSlotSwapRoutine()
     {
-        yield return new WaitForSeconds(1f);
+        Debug.Log("Routine trigger");
+        yield return new WaitForSeconds(1.5f);
         arrow.gameObject.SetActive(false);
         leftSlot.SetActive(true);
         rightSlot.SetActive(true);
+    }
+    private IEnumerator SlotArrowSwapRoutine()
+    {
+        yield return new WaitForSeconds(0f);
+        arrow.gameObject.SetActive(true);
+        leftSlot.SetActive(false);
+        rightSlot.SetActive(false);    
     }
 
     private void OnEnable()
@@ -44,28 +55,35 @@ public class LetterSetController : MonoBehaviour
         ImageDropSlot.onDropInSlot -= LetterDrag;
     }
 
-    private  void LetterDrag(GameObject drag, GameObject drop, bool validate)
+    private void LetterDrag(GameObject drag, GameObject drop, bool validate)
     {
         if (drag.tag == drop.tag)
         {
-            // Debug.Log("Correct Answer");
             drag.transform.SetParent(drop.transform);
             drag.transform.position = drop.transform.position;
             drag.GetComponent<ImageDragandDrop>().resetPositionOnDrop = false;
             drag.GetComponent<ImageDragandDrop>().canDrag = false;
+
+            if (drag.tag == "left")
+            {
+                slot_1.Play();
+            }
+            else if (drag.tag == "right")
+            {
+                slot_2.Play();
+            }
+
             lettercount++;
             Debug.Log(lettercount);
-            if(lettercount == 2)
+
+            if (lettercount >= 2)
             {
-                Debug.Log("LetterDropped");
-                leftSlot.SetActive(false);
-                rightSlot.SetActive(false);
-                Invoke("MiddleletterDisplay", 1f);
+                StartCoroutine(CombineLettersAndReplaceRoutine());
+                lettercount = 0;
             }
         }
         else
         {
-            // Debug.Log("Wrong Answer");
             LetterDragReset(drag);
         }
     }
@@ -76,14 +94,47 @@ public class LetterSetController : MonoBehaviour
         drag.GetComponent<ImageDragandDrop>().canDrag = true;
     }
 
-    private void MiddleletterDisplay()
+    private IEnumerator CombineLettersAndReplaceRoutine()
     {
-        if(middleLettersIndex < middleLetters.Count)
-        {
-            middleLetters[middleLettersIndex].SetActive(true);
-            middleLettersIndex++;
-        }
+        yield return new WaitForSeconds(1.0f); // Adjust the delay as needed
+         middleLetters[middleLettersIndex].SetActive(true);
+         Debug.Log("middle letter display");
+         leftSlot.SetActive(false);
+         rightSlot.SetActive(false);
+        
+        leftLetters[leftLettersIndex].SetActive(false);
+    rightLetters[rightLettersIndex].SetActive(false);
+
+    leftLettersIndex++;
+    rightLettersIndex++;
+
+    if (leftLettersIndex < leftLetters.Count && rightLettersIndex < rightLetters.Count)
+    {
+        middleLetters[middleLettersIndex].SetActive(false);
+        StartCoroutine(SlotArrowSwapRoutine());
+        middleLettersIndex++;
+        leftLetters[leftLettersIndex].SetActive(true);
+        rightLetters[rightLettersIndex].SetActive(true);
+    }
+    else if (leftLettersIndex < leftLetters.Count)
+    {
+        // Handle the case where there are more letters on the left but not on the right
+        leftLetters[leftLettersIndex].SetActive(true);
+    }
+    else if (rightLettersIndex < rightLetters.Count)
+    {
+        // Handle the case where there are more letters on the right but not on the left
+        rightLetters[rightLettersIndex].SetActive(true);
+    }
+    else
+    {
+        // All letters exhausted, handle end game or reset logic
     }
 
+        yield return new WaitForSeconds(1.0f); // Adjust the delay before reactivating slots
+        StartCoroutine(ArrowAndSlotSwapRoutine());
+         
 
+
+    }
 }
