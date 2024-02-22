@@ -1,0 +1,581 @@
+fileFormatVersion: 2
+guid: 24ebdb6e00bdfea4cb31ffbac236373e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4423126560837306604
+    second: can-character_Lipsync_0
+  - first:
+      213: 1182289594352029280
+    second: can-character_Lipsync_1_A_E_I
+  - first:
+      213: 6137738482740498673
+    second: can-character_Lipsync_1_A_E_I
+  - first:
+      213: 8763854747729481587
+    second: can-character_Lipsync_2_L
+  - first:
+      213: 8828411676449271794
+    second: can-character_Lipsync_4_F_V
+  - first:
+      213: 962879035579288274
+    second: can-character_Lipsync_3_O
+  - first:
+      213: -4218153344331379453
+    second: can-character_Lipsync_6_0
+  - first:
+      213: -7167330991247063945
+    second: can-character_Lipsync_7_1_E
+  - first:
+      213: -6907720665542320386
+    second: can-character_Lipsync_8
+  - first:
+      213: 2539639087581648351
+    second: can-character_Lipsync_9
+  - first:
+      213: 7109638037465408385
+    second: can-character_Lipsync_10
+  - first:
+      213: 3530023868095119269
+    second: can-character_Lipsync_11
+  - first:
+      213: -2398870613077890993
+    second: can-character_Lipsync_12
+  - first:
+      213: 8996102188036705641
+    second: can-character_Lipsync_13
+  - first:
+      213: -3166265686345755123
+    second: can-character_Lipsync_14
+  - first:
+      213: -585405413062401427
+    second: can-character_Lipsync_4_F_V
+  - first:
+      213: -6284405411903856191
+    second: can-character_Lipsync_5_Q_W
+  - first:
+      213: 5567925363697444852
+    second: can-character_Lipsync_17
+  - first:
+      213: -371416599100642209
+    second: can-character_Lipsync_6_0
+  - first:
+      213: -7728110323202898350
+    second: can-character_Lipsync_19
+  - first:
+      213: -6550747131691448719
+    second: can-character_Lipsync_20
+  - first:
+      213: -1123040430650842739
+    second: can-character_Lipsync_21
+  - first:
+      213: -6535922883574773616
+    second: can-character_Lipsync_22
+  - first:
+      213: 5829187648156625582
+    second: can-character_Lipsync_23
+  - first:
+      213: -4050353859609398739
+    second: can-character_Lipsync_24
+  - first:
+      213: 6048343475726881127
+    second: can-character_Lipsync_25
+  - first:
+      213: -4571058729682508534
+    second: can-character_Lipsync_26
+  - first:
+      213: -3557015457935629698
+    second: can-character_Lipsync_27
+  - first:
+      213: -3248870460673090602
+    second: can-character_Lipsync_28
+  - first:
+      213: 4001189350494722111
+    second: can-character_Lipsync_29
+  - first:
+      213: -2107668440720404093
+    second: can-character_Lipsync_30
+  - first:
+      213: -7384642234845110716
+    second: can-character_Lipsync_31
+  - first:
+      213: -1910901890257545889
+    second: can-character_Lipsync_32
+  - first:
+      213: -1511349124494598369
+    second: can-character_Lipsync_7_1_E
+  - first:
+      213: 681453036178976077
+    second: can-character_Lipsync_34
+  - first:
+      213: -6605721934445554314
+    second: can-character_Lipsync_8
+  - first:
+      213: 6020756570024619021
+    second: can-character_Lipsync_36
+  - first:
+      213: -2594137403840007186
+    second: can-character_Lipsync_9
+  - first:
+      213: 3395864833012409484
+    second: can-character_Lipsync_38
+  - first:
+      213: -2742767003393179641
+    second: can-character_Lipsync_39
+  - first:
+      213: 4029920878922589417
+    second: can-character_Lipsync_40
+  - first:
+      213: -1715286944719093259
+    second: can-character_Lipsync_41
+  - first:
+      213: 3850086561395420629
+    second: can-character_Lipsync_42
+  - first:
+      213: -396995012174770347
+    second: can-character_Lipsync_43
+  - first:
+      213: -349197783830997989
+    second: can-character_Lipsync_44
+  - first:
+      213: 8311526303760288342
+    second: can-character_Lipsync_10
+  - first:
+      213: 2753248359697350594
+    second: can-character_Lipsync_11
+  - first:
+      213: 3012680210020261168
+    second: can-character_Lipsync_12
+  - first:
+      213: 8441340005750169604
+    second: can-character_Lipsync_48
+  - first:
+      213: -1638029121877163257
+    second: can-character_Lipsync_49
+  - first:
+      213: -4291635317285606915
+    second: can-character_Lipsync_50
+  - first:
+      213: 4258213666943209239
+    second: can-character_Lipsync_51
+  - first:
+      213: -5026678100040854094
+    second: can-character_Lipsync_52
+  - first:
+      213: 3142859240774955933
+    second: can-character_Lipsync_53
+  - first:
+      213: -4822219125533070748
+    second: can-character_Lipsync_54
+  - first:
+      213: -6697802733410637454
+    second: can-character_Lipsync_55
+  - first:
+      213: -7773643260148912679
+    second: can-character_Lipsync_56
+  - first:
+      213: -4940184741598948747
+    second: can-character_Lipsync_57
+  - first:
+      213: 2401227181195957157
+    second: can-character_Lipsync_58
+  - first:
+      213: -4155342222733813471
+    second: can-character_Lipsync_59
+  - first:
+      213: -8263241648041363207
+    second: can-character_Lipsync_60
+  - first:
+      213: -7104245783121763228
+    second: can-character_Lipsync_61
+  - first:
+      213: -544323317935826277
+    second: can-character_Lipsync_62
+  - first:
+      213: 7014163174995668268
+    second: can-character_Lipsync_63
+  - first:
+      213: -3005431958095110752
+    second: can-character_Lipsync_64
+  - first:
+      213: 3816000068669480836
+    second: can-character_Lipsync_65
+  - first:
+      213: -7467931389964344417
+    second: can-character_Lipsync_66
+  - first:
+      213: 928844547949727079
+    second: can-character_Lipsync_67
+  - first:
+      213: -2614390964424463004
+    second: can-character_Lipsync_68
+  - first:
+      213: 5224958259935629698
+    second: can-character_Lipsync_69
+  - first:
+      213: -2405039079692679407
+    second: can-character_Lipsync_70
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 100
+    crunchedCompression: 1
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 100
+    crunchedCompression: 1
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 100
+    crunchedCompression: 1
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: can-character_Lipsync_1_A_E_I
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 810
+        width: 262
+        height: 197
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f01ef381a0ad2550800000000000000
+      internalID: 6137738482740498673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: can-character_Lipsync_2_L
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 817
+        width: 218
+        height: 176
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37f498dc5777f9970800000000000000
+      internalID: 8763854747729481587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: can-character_Lipsync_3_O
+      rect:
+        serializedVersion: 2
+        x: 853
+        y: 840
+        width: 96
+        height: 138
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dacf5d9165dc5d00800000000000000
+      internalID: 962879035579288274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: can-character_Lipsync_4_F_V
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 623
+        width: 228
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6223d0e0e830e7f0800000000000000
+      internalID: -585405413062401427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: can-character_Lipsync_5_Q_W
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 597
+        width: 157
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c1ade6f29e49c8a0800000000000000
+      internalID: -6284405411903856191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: can-character_Lipsync_6_0
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 629
+        width: 184
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5c2cea229678daf0800000000000000
+      internalID: -371416599100642209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: can-character_Lipsync_7_1_E
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 345
+        width: 297
+        height: 187
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1fd6ee8afb960be0800000000000000
+      internalID: -1511349124494598369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: can-character_Lipsync_8
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 345
+        width: 252
+        height: 157
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 675dd5436e2c354a0800000000000000
+      internalID: -6605721934445554314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: can-character_Lipsync_9
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 352
+        width: 204
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee3ff8986c5cffbd0800000000000000
+      internalID: -2594137403840007186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: can-character_Lipsync_10
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 155
+        width: 232
+        height: 97
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65a82fc0329785370800000000000000
+      internalID: 8311526303760288342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: can-character_Lipsync_11
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 122
+        width: 259
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cfff2abbc0853620800000000000000
+      internalID: 2753248359697350594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: can-character_Lipsync_12
+      rect:
+        serializedVersion: 2
+        x: 824
+        y: 112
+        width: 152
+        height: 98
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03d5b1c60b03fc920800000000000000
+      internalID: 3012680210020261168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

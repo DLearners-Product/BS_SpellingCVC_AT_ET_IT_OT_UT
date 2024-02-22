@@ -30,6 +30,8 @@ TagManager:
   - j
   - k
   - n
+  - left
+  - right
   layers:
   - Default
   - TransparentFX
