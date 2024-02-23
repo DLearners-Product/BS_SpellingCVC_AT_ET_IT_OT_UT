@@ -215,6 +215,54 @@ TextureImporter:
   - first:
       213: -2405039079692679407
     second: can-character_Lipsync_70
+  - first:
+      213: 332113853195456810
+    second: can-character_Lipsync_1
+  - first:
+      213: 6137738482740498673
+    second: can-character_Lipsync_2
+  - first:
+      213: -581488722113235079
+    second: can-character_Lipsync_3
+  - first:
+      213: 8068550801982966435
+    second: can-character_Lipsync_4
+  - first:
+      213: -4249538918367970856
+    second: can-character_Lipsync_5
+  - first:
+      213: 8964392536153300935
+    second: can-character_Lipsync_6
+  - first:
+      213: 6612811085321516266
+    second: can-character_Lipsync_7
+  - first:
+      213: -585405413062401427
+    second: can-character_Lipsync_15
+  - first:
+      213: 4894845443422157449
+    second: can-character_Lipsync_16
+  - first:
+      213: -371416599100642209
+    second: can-character_Lipsync_18
+  - first:
+      213: -1511349124494598369
+    second: can-character_Lipsync_33
+  - first:
+      213: -6605721934445554314
+    second: can-character_Lipsync_35
+  - first:
+      213: -2594137403840007186
+    second: can-character_Lipsync_37
+  - first:
+      213: 8311526303760288342
+    second: can-character_Lipsync_45
+  - first:
+      213: 2753248359697350594
+    second: can-character_Lipsync_46
+  - first:
+      213: 3012680210020261168
+    second: can-character_Lipsync_47
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -315,10 +363,10 @@ TextureImporter:
       name: can-character_Lipsync_1_A_E_I
       rect:
         serializedVersion: 2
-        x: 62
+        x: 35
         y: 810
-        width: 262
-        height: 197
+        width: 310
+        height: 195
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -336,10 +384,10 @@ TextureImporter:
       name: can-character_Lipsync_2_L
       rect:
         serializedVersion: 2
-        x: 438
+        x: 379
         y: 817
-        width: 218
-        height: 176
+        width: 310
+        height: 195
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -357,10 +405,10 @@ TextureImporter:
       name: can-character_Lipsync_3_O
       rect:
         serializedVersion: 2
-        x: 853
-        y: 840
-        width: 96
-        height: 138
+        x: 721
+        y: 814
+        width: 303
+        height: 195
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -378,10 +426,10 @@ TextureImporter:
       name: can-character_Lipsync_4_F_V
       rect:
         serializedVersion: 2
-        x: 79
-        y: 623
-        width: 228
-        height: 101
+        x: 41
+        y: 578
+        width: 317
+        height: 178
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -399,10 +447,10 @@ TextureImporter:
       name: can-character_Lipsync_5_Q_W
       rect:
         serializedVersion: 2
-        x: 472
-        y: 597
-        width: 157
-        height: 144
+        x: 381
+        y: 578
+        width: 315
+        height: 177
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -420,10 +468,10 @@ TextureImporter:
       name: can-character_Lipsync_6_0
       rect:
         serializedVersion: 2
-        x: 808
-        y: 629
-        width: 184
-        height: 58
+        x: 722
+        y: 580
+        width: 300
+        height: 176
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -441,10 +489,10 @@ TextureImporter:
       name: can-character_Lipsync_7_1_E
       rect:
         serializedVersion: 2
-        x: 47
-        y: 345
-        width: 297
-        height: 187
+        x: 36
+        y: 341
+        width: 315
+        height: 191
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -462,10 +510,10 @@ TextureImporter:
       name: can-character_Lipsync_8
       rect:
         serializedVersion: 2
-        x: 422
-        y: 345
-        width: 252
-        height: 157
+        x: 374
+        y: 341
+        width: 324
+        height: 187
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -483,10 +531,10 @@ TextureImporter:
       name: can-character_Lipsync_9
       rect:
         serializedVersion: 2
-        x: 799
-        y: 352
-        width: 204
-        height: 120
+        x: 717
+        y: 341
+        width: 307
+        height: 187
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -504,10 +552,10 @@ TextureImporter:
       name: can-character_Lipsync_10
       rect:
         serializedVersion: 2
-        x: 78
-        y: 155
-        width: 232
-        height: 97
+        x: 46
+        y: 84
+        width: 310
+        height: 195
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -525,10 +573,10 @@ TextureImporter:
       name: can-character_Lipsync_11
       rect:
         serializedVersion: 2
-        x: 420
-        y: 122
-        width: 259
-        height: 118
+        x: 378
+        y: 103
+        width: 337
+        height: 174
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -546,10 +594,10 @@ TextureImporter:
       name: can-character_Lipsync_12
       rect:
         serializedVersion: 2
-        x: 824
-        y: 112
-        width: 152
-        height: 98
+        x: 729
+        y: 103
+        width: 290
+        height: 172
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

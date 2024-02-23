@@ -16,6 +16,7 @@ public class LetterSetController : MonoBehaviour
     [SerializeField] private AudioClip wrongClip;
     [SerializeField] private ParticleSystem slot_1;
     [SerializeField] private ParticleSystem slot_2;
+    [SerializeField] private List<AudioClip> middleAudioclips;
 
     private int leftLettersIndex, rightLettersIndex, middleLettersIndex;
     private int lettercount = 0;
@@ -78,8 +79,8 @@ public class LetterSetController : MonoBehaviour
 
             if (lettercount >= 2)
             {
-                StartCoroutine(CombineLettersAndReplaceRoutine());
                 lettercount = 0;
+                StartCoroutine(CombineLettersAndReplaceRoutine());
             }
         }
         else
@@ -97,44 +98,44 @@ public class LetterSetController : MonoBehaviour
     private IEnumerator CombineLettersAndReplaceRoutine()
     {
         yield return new WaitForSeconds(1.0f); // Adjust the delay as needed
-         middleLetters[middleLettersIndex].SetActive(true);
-         Debug.Log("middle letter display");
-         leftSlot.SetActive(false);
-         rightSlot.SetActive(false);
-        
+        middleLetters[middleLettersIndex].SetActive(true);
         leftLetters[leftLettersIndex].SetActive(false);
-    rightLetters[rightLettersIndex].SetActive(false);
+        rightLetters[rightLettersIndex].SetActive(false);
+        Debug.Log("middle letter display");
+        leftSlot.SetActive(false);
+        rightSlot.SetActive(false);
 
-    leftLettersIndex++;
-    rightLettersIndex++;
-
-    if (leftLettersIndex < leftLetters.Count && rightLettersIndex < rightLetters.Count)
-    {
-        middleLetters[middleLettersIndex].SetActive(false);
-        StartCoroutine(SlotArrowSwapRoutine());
-        middleLettersIndex++;
-        leftLetters[leftLettersIndex].SetActive(true);
-        rightLetters[rightLettersIndex].SetActive(true);
-    }
-    else if (leftLettersIndex < leftLetters.Count)
-    {
-        // Handle the case where there are more letters on the left but not on the right
-        leftLetters[leftLettersIndex].SetActive(true);
-    }
-    else if (rightLettersIndex < rightLetters.Count)
-    {
-        // Handle the case where there are more letters on the right but not on the left
-        rightLetters[rightLettersIndex].SetActive(true);
-    }
-    else
-    {
-        // All letters exhausted, handle end game or reset logic
-    }
+        leftLettersIndex++;
+        rightLettersIndex++;
+        yield return new WaitForSeconds(2.0f);
+        if (leftLettersIndex < leftLetters.Count && rightLettersIndex < rightLetters.Count)
+        {
+            middleLetters[middleLettersIndex].SetActive(false);
+            StartCoroutine(SlotArrowSwapRoutine());
+            middleLettersIndex++;
+            leftLetters[leftLettersIndex].SetActive(true);
+            rightLetters[rightLettersIndex].SetActive(true);
+        }
+        else if (leftLettersIndex < leftLetters.Count)
+        {
+            // Handle the case where there are more letters on the left but not on the right
+            leftLetters[leftLettersIndex].SetActive(true);
+        }
+        else if (rightLettersIndex < rightLetters.Count)
+        {
+            // Handle the case where there are more letters on the right but not on the left
+            rightLetters[rightLettersIndex].SetActive(true);
+        }
+        else
+        {
+            middleLetters[middleLettersIndex].SetActive(true);
+            // yield return new WaitForSeconds(1.0f); // Adjust the delay before reactivating slots
+            // StartCoroutine(ArrowAndSlotSwapRoutine());
+            yield break;
+        }
 
         yield return new WaitForSeconds(1.0f); // Adjust the delay before reactivating slots
         StartCoroutine(ArrowAndSlotSwapRoutine());
-         
-
-
     }
+
 }
