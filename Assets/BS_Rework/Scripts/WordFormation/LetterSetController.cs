@@ -17,6 +17,7 @@ public class LetterSetController : MonoBehaviour
     [SerializeField] private ParticleSystem slot_1;
     [SerializeField] private ParticleSystem slot_2;
     [SerializeField] private List<AudioClip> middleAudioclips;
+    [SerializeField] private GameObject transition;
 
     private int leftLettersIndex, rightLettersIndex, middleLettersIndex;
     private int lettercount = 0;
@@ -38,7 +39,7 @@ public class LetterSetController : MonoBehaviour
         leftSlot.SetActive(true);
         rightSlot.SetActive(true);
     }
-    private IEnumerator SlotArrowSwapRoutine()
+    private IEnumerator SlotAndArrowSwapRoutine()
     {
         yield return new WaitForSeconds(0f);
         arrow.gameObject.SetActive(true);
@@ -95,7 +96,7 @@ public class LetterSetController : MonoBehaviour
         drag.GetComponent<ImageDragandDrop>().canDrag = true;
     }
 
-    private IEnumerator CombineLettersAndReplaceRoutine()
+    private IEnumerator CombineLettersRoutine()
     {
         yield return new WaitForSeconds(1.0f); // Adjust the delay as needed
         middleLetters[middleLettersIndex].SetActive(true);
@@ -104,38 +105,41 @@ public class LetterSetController : MonoBehaviour
         Debug.Log("middle letter display");
         leftSlot.SetActive(false);
         rightSlot.SetActive(false);
-
         leftLettersIndex++;
         rightLettersIndex++;
+    }
+    private IEnumerator ReplaceLettersRoutine()
+    {
         yield return new WaitForSeconds(2.0f);
         if (leftLettersIndex < leftLetters.Count && rightLettersIndex < rightLetters.Count)
         {
             middleLetters[middleLettersIndex].SetActive(false);
-            StartCoroutine(SlotArrowSwapRoutine());
+            yield return StartCoroutine(SlotAndArrowSwapRoutine());
             middleLettersIndex++;
             leftLetters[leftLettersIndex].SetActive(true);
             rightLetters[rightLettersIndex].SetActive(true);
         }
         else if (leftLettersIndex < leftLetters.Count)
         {
-            // Handle the case where there are more letters on the left but not on the right
             leftLetters[leftLettersIndex].SetActive(true);
         }
         else if (rightLettersIndex < rightLetters.Count)
         {
-            // Handle the case where there are more letters on the right but not on the left
             rightLetters[rightLettersIndex].SetActive(true);
         }
         else
         {
             middleLetters[middleLettersIndex].SetActive(true);
-            // yield return new WaitForSeconds(1.0f); // Adjust the delay before reactivating slots
-            // StartCoroutine(ArrowAndSlotSwapRoutine());
             yield break;
         }
 
-        yield return new WaitForSeconds(1.0f); // Adjust the delay before reactivating slots
-        StartCoroutine(ArrowAndSlotSwapRoutine());
+        yield return StartCoroutine(ArrowAndSlotSwapRoutine());
     }
+    private IEnumerator CombineLettersAndReplaceRoutine()
+    {
+        yield return StartCoroutine(CombineLettersRoutine());
+        yield return StartCoroutine(ReplaceLettersRoutine());
+    }
+
 
 }
