@@ -1,11 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 public class WordFormationController : MonoBehaviour
 {
     public GameObject[] letterSetsHolder;
     public AudioSource activitySource;
-    private int letterSetChildIndex;
+    public int letterSetChildIndex;
+    [SerializeField] private GameObject transitionEffect;
+    public GameObject G_final;
 
     private void Start() 
     {
@@ -13,13 +16,20 @@ public class WordFormationController : MonoBehaviour
     }
 
 
-   private void LetterSetSwitchFunction()
+   public IEnumerator LetterSetSwitchRoutine()
    {
+        transitionEffect.SetActive(true);
+        yield return new WaitForSeconds(1f);
         if(letterSetChildIndex < letterSetsHolder.Length -1)
         {
             letterSetsHolder[letterSetChildIndex].gameObject.SetActive(false);
             letterSetChildIndex ++;
+            transitionEffect.SetActive(false);
             letterSetsHolder[letterSetChildIndex].gameObject.SetActive(true);
+        }
+        if(letterSetChildIndex == letterSetsHolder.Length -1)
+        {
+            G_final.SetActive(true);
         }
    }
 

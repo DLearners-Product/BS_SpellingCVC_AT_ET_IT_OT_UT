@@ -17,10 +17,9 @@ public class LetterSetController : MonoBehaviour
     [SerializeField] private ParticleSystem slot_1;
     [SerializeField] private ParticleSystem slot_2;
     [SerializeField] private List<AudioClip> middleAudioclips;
-    [SerializeField] private GameObject transition;
-
     private int leftLettersIndex, rightLettersIndex, middleLettersIndex;
     private int lettercount = 0;
+    [SerializeField] private WordFormationController _wfc;
 
     private void Start()
     {
@@ -130,7 +129,9 @@ public class LetterSetController : MonoBehaviour
         else
         {
             middleLetters[middleLettersIndex].SetActive(true);
+            StartCoroutine(_wfc.LetterSetSwitchRoutine());
             yield break;
+            
         }
 
         yield return StartCoroutine(ArrowAndSlotSwapRoutine());
