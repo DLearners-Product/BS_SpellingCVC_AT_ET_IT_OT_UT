@@ -5459,8 +5459,8 @@ GameObject:
   - component: {fileID: 132251041}
   - component: {fileID: 132251044}
   - component: {fileID: 132251043}
-  - component: {fileID: 132251045}
   - component: {fileID: 132251046}
+  - component: {fileID: 132251045}
   m_Layer: 5
   m_Name: c
   m_TagString: left
@@ -5566,11 +5566,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 132251039}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a36c1efc96333e241b77a18cc8de7cfb, type: 3}
+  m_Script: {fileID: 11500000, guid: fb96d107dc808ee45b62812573342c9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 132251046}
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: f5b0aab395f56b44ebe59c95bee682c9, type: 3}
+  Juice_mouth: {fileID: 1993430528}
+  triggerWord: c_trigger
 --- !u!82 &132251046
 AudioSource:
   m_ObjectHideFlags: 0
@@ -6152,9 +6154,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 207439580}
-  clip: {fileID: 8300000, guid: 3abb002360c1ce149bd99ac002c0247c, type: 3}
+  clip: {fileID: 8300000, guid: 383091fc5db05f449b8384779d3d994d, type: 3}
   Juice_mouth: {fileID: 1993430528}
-  triggerWord: a_trigger
+  triggerWord: u_trigger
 --- !u!82 &207439580
 AudioSource:
   m_ObjectHideFlags: 0
@@ -6469,7 +6471,15 @@ MonoBehaviour:
   wrongClip: {fileID: 8300000, guid: ddc0fe2d45c8ccd4b8ce29f5d69beec0, type: 3}
   slot_1: {fileID: 1496523111}
   slot_2: {fileID: 1193215778}
-  middleAudioclips: []
+  middleAudioclips:
+  - {fileID: 8300000, guid: 1fd7ed050dd6cd44396fc36c0747f2ae, type: 3}
+  - {fileID: 8300000, guid: aeee8c47311f7e14a9b049adbfe24cba, type: 3}
+  - {fileID: 8300000, guid: d8b5615843dfc0642bc1978e78c39249, type: 3}
+  middleLetterTriggers:
+  - ut_trigger
+  - cut_trigger
+  - hut_trigger
+  lipAnimator: {fileID: 1993430528}
   _wfc: {fileID: 3517327273548087393}
 --- !u!1 &244853489
 GameObject:
@@ -7553,8 +7563,8 @@ GameObject:
   - component: {fileID: 327355830}
   - component: {fileID: 327355829}
   - component: {fileID: 327355828}
-  - component: {fileID: 327355827}
   - component: {fileID: 327355826}
+  - component: {fileID: 327355827}
   m_Layer: 5
   m_Name: f
   m_TagString: left
@@ -7686,11 +7696,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 327355824}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a36c1efc96333e241b77a18cc8de7cfb, type: 3}
+  m_Script: {fileID: 11500000, guid: fb96d107dc808ee45b62812573342c9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 327355826}
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: 8c05ad988059b80439688d923c12c83c, type: 3}
+  Juice_mouth: {fileID: 1993430528}
+  triggerWord: f_trigger
 --- !u!114 &327355828
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7742,7 +7754,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -5630999429183892861, guid: 2bb46f6e26e9ec148bae60bc177aad29,
+  m_Sprite: {fileID: -7255938556539188698, guid: 2bb46f6e26e9ec148bae60bc177aad29,
     type: 3}
   m_Type: 0
   m_PreserveAspect: 1
@@ -12702,8 +12714,8 @@ GameObject:
   - component: {fileID: 379041919}
   - component: {fileID: 379041918}
   - component: {fileID: 379041917}
-  - component: {fileID: 379041916}
   - component: {fileID: 379041915}
+  - component: {fileID: 379041916}
   m_Layer: 5
   m_Name: h
   m_TagString: left
@@ -12835,11 +12847,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 379041913}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a36c1efc96333e241b77a18cc8de7cfb, type: 3}
+  m_Script: {fileID: 11500000, guid: fb96d107dc808ee45b62812573342c9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 379041915}
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: 660e43a49994e484d9a3b3f04181d2f1, type: 3}
+  Juice_mouth: {fileID: 1993430528}
+  triggerWord: h_trigger
 --- !u!114 &379041917
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12923,8 +12937,8 @@ GameObject:
   - component: {fileID: 386145325}
   - component: {fileID: 386145324}
   - component: {fileID: 386145323}
-  - component: {fileID: 386145322}
   - component: {fileID: 386145321}
+  - component: {fileID: 386145322}
   m_Layer: 5
   m_Name: p
   m_TagString: left
@@ -13056,11 +13070,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 386145319}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a36c1efc96333e241b77a18cc8de7cfb, type: 3}
+  m_Script: {fileID: 11500000, guid: fb96d107dc808ee45b62812573342c9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 386145321}
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: 4e1081ea9295e57478887c3eeece8d04, type: 3}
+  Juice_mouth: {fileID: 1993430528}
+  triggerWord: p_trigger
 --- !u!114 &386145323
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24020,7 +24036,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -7518468303197277021, guid: ad002e25064477a4b9d19b637cdcbb43,
+  m_Sprite: {fileID: 1894016430773122689, guid: ad002e25064477a4b9d19b637cdcbb43,
     type: 3}
   m_Type: 0
   m_PreserveAspect: 1
@@ -24402,8 +24418,8 @@ GameObject:
   - component: {fileID: 607625370}
   - component: {fileID: 607625369}
   - component: {fileID: 607625368}
-  - component: {fileID: 607625367}
   - component: {fileID: 607625366}
+  - component: {fileID: 607625367}
   m_Layer: 5
   m_Name: h
   m_TagString: left
@@ -24535,11 +24551,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 607625364}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a36c1efc96333e241b77a18cc8de7cfb, type: 3}
+  m_Script: {fileID: 11500000, guid: fb96d107dc808ee45b62812573342c9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 607625366}
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: 660e43a49994e484d9a3b3f04181d2f1, type: 3}
+  Juice_mouth: {fileID: 1993430528}
+  triggerWord: h_trugger
 --- !u!114 &607625368
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24737,136 +24755,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1001 &694803577
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1803371186}
-    m_Modifications:
-    - target: {fileID: 2405705420154720284, guid: ba74f9880a4e40248839d66cf4e2a95c,
-        type: 3}
-      propertyPath: m_Name
-      value: 7spinWheel
-      objectReference: {fileID: 0}
-    - target: {fileID: 2405705420154720284, guid: ba74f9880a4e40248839d66cf4e2a95c,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2405705420154720285, guid: ba74f9880a4e40248839d66cf4e2a95c,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2405705420154720285, guid: ba74f9880a4e40248839d66cf4e2a95c,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2405705420154720285, guid: ba74f9880a4e40248839d66cf4e2a95c,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2405705420154720285, guid: ba74f9880a4e40248839d66cf4e2a95c,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2405705420154720285, guid: ba74f9880a4e40248839d66cf4e2a95c,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2405705420154720285, guid: ba74f9880a4e40248839d66cf4e2a95c,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2405705420154720285, guid: ba74f9880a4e40248839d66cf4e2a95c,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2405705420154720285, guid: ba74f9880a4e40248839d66cf4e2a95c,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 2405705420154720285, guid: ba74f9880a4e40248839d66cf4e2a95c,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2405705420154720285, guid: ba74f9880a4e40248839d66cf4e2a95c,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2405705420154720285, guid: ba74f9880a4e40248839d66cf4e2a95c,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2405705420154720285, guid: ba74f9880a4e40248839d66cf4e2a95c,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2405705420154720285, guid: ba74f9880a4e40248839d66cf4e2a95c,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2405705420154720285, guid: ba74f9880a4e40248839d66cf4e2a95c,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2405705420154720285, guid: ba74f9880a4e40248839d66cf4e2a95c,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2405705420154720285, guid: ba74f9880a4e40248839d66cf4e2a95c,
-        type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2405705420154720285, guid: ba74f9880a4e40248839d66cf4e2a95c,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2405705420154720285, guid: ba74f9880a4e40248839d66cf4e2a95c,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2405705420154720285, guid: ba74f9880a4e40248839d66cf4e2a95c,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2405705420154720285, guid: ba74f9880a4e40248839d66cf4e2a95c,
-        type: 3}
-      propertyPath: m_Pivot.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2405705420154720285, guid: ba74f9880a4e40248839d66cf4e2a95c,
-        type: 3}
-      propertyPath: m_Pivot.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: ba74f9880a4e40248839d66cf4e2a95c, type: 3}
---- !u!224 &694803578 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 2405705420154720285, guid: ba74f9880a4e40248839d66cf4e2a95c,
-    type: 3}
-  m_PrefabInstance: {fileID: 694803577}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &702758151
 GameObject:
   m_ObjectHideFlags: 0
@@ -25142,6 +25030,7 @@ GameObject:
   - component: {fileID: 717603253}
   - component: {fileID: 717603252}
   - component: {fileID: 717603251}
+  - component: {fileID: 717603256}
   m_Layer: 5
   m_Name: ut_1
   m_TagString: right
@@ -25334,6 +25223,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 717603249}
   m_CullTransparentMesh: 0
+--- !u!114 &717603256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 717603249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb96d107dc808ee45b62812573342c9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 717603251}
+  clip: {fileID: 8300000, guid: 1fd7ed050dd6cd44396fc36c0747f2ae, type: 3}
+  Juice_mouth: {fileID: 1993430528}
+  triggerWord: ut_trigger
 --- !u!1 &731883975
 GameObject:
   m_ObjectHideFlags: 0
@@ -25556,7 +25461,7 @@ MonoBehaviour:
   audioSource: {fileID: 731883977}
   clip: {fileID: 8300000, guid: 122918cf2e65f144aa707ffb01844659, type: 3}
   Juice_mouth: {fileID: 1993430528}
-  triggerWord: at_trigger
+  triggerWord: et_trigger
 --- !u!1 &750817712
 GameObject:
   m_ObjectHideFlags: 0
@@ -25710,7 +25615,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -7518468303197277021, guid: ad002e25064477a4b9d19b637cdcbb43,
+  m_Sprite: {fileID: -6178310115804263334, guid: ad002e25064477a4b9d19b637cdcbb43,
     type: 3}
   m_Type: 0
   m_PreserveAspect: 1
@@ -26119,6 +26024,7 @@ GameObject:
   - component: {fileID: 797085615}
   - component: {fileID: 797085614}
   - component: {fileID: 797085613}
+  - component: {fileID: 797085618}
   m_Layer: 5
   m_Name: ut
   m_TagString: right
@@ -26311,6 +26217,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 797085611}
   m_CullTransparentMesh: 0
+--- !u!114 &797085618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 797085611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb96d107dc808ee45b62812573342c9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 797085613}
+  clip: {fileID: 8300000, guid: 1fd7ed050dd6cd44396fc36c0747f2ae, type: 3}
+  Juice_mouth: {fileID: 1993430528}
+  triggerWord: ut_trigger
 --- !u!1 &798801449
 GameObject:
   m_ObjectHideFlags: 0
@@ -26679,10 +26601,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb96d107dc808ee45b62812573342c9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 0}
-  clip: {fileID: 0}
-  Juice_mouth: {fileID: 0}
-  triggerWord: 
+  audioSource: {fileID: 839544415}
+  clip: {fileID: 8300000, guid: 4f21e7ebf4b84c6468367043ed149410, type: 3}
+  Juice_mouth: {fileID: 1993430528}
+  triggerWord: it_trigger
 --- !u!1 &848748287
 GameObject:
   m_ObjectHideFlags: 0
@@ -27064,7 +26986,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -466523060451772990, guid: 2bb46f6e26e9ec148bae60bc177aad29,
+  m_Sprite: {fileID: 8942792105016576371, guid: 2bb46f6e26e9ec148bae60bc177aad29,
     type: 3}
   m_Type: 0
   m_PreserveAspect: 1
@@ -27331,9 +27253,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 985198178}
-  clip: {fileID: 8300000, guid: 3abb002360c1ce149bd99ac002c0247c, type: 3}
+  clip: {fileID: 8300000, guid: 2a4ccc1d60f08bb49974a2737d5ee31b, type: 3}
   Juice_mouth: {fileID: 1993430528}
-  triggerWord: a_trigger
+  triggerWord: e_trigger
 --- !u!82 &985198178
 AudioSource:
   m_ObjectHideFlags: 0
@@ -28333,8 +28255,8 @@ GameObject:
   - component: {fileID: 1099371597}
   - component: {fileID: 1099371596}
   - component: {fileID: 1099371595}
-  - component: {fileID: 1099371594}
   - component: {fileID: 1099371593}
+  - component: {fileID: 1099371594}
   m_Layer: 5
   m_Name: c
   m_TagString: left
@@ -28466,11 +28388,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1099371591}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a36c1efc96333e241b77a18cc8de7cfb, type: 3}
+  m_Script: {fileID: 11500000, guid: fb96d107dc808ee45b62812573342c9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 1099371593}
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: f5b0aab395f56b44ebe59c95bee682c9, type: 3}
+  Juice_mouth: {fileID: 1993430528}
+  triggerWord: c_trigger
 --- !u!114 &1099371595
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33896,8 +33820,8 @@ GameObject:
   - component: {fileID: 1208185732}
   - component: {fileID: 1208185731}
   - component: {fileID: 1208185730}
-  - component: {fileID: 1208185729}
   - component: {fileID: 1208185728}
+  - component: {fileID: 1208185729}
   m_Layer: 5
   m_Name: s
   m_TagString: left
@@ -34029,11 +33953,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1208185726}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a36c1efc96333e241b77a18cc8de7cfb, type: 3}
+  m_Script: {fileID: 11500000, guid: fb96d107dc808ee45b62812573342c9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 1208185728}
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: b97fb5dd747f81f44ac5c3ed76163013, type: 3}
+  Juice_mouth: {fileID: 1993430528}
+  triggerWord: s_trigger
 --- !u!114 &1208185730
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35019,7 +34945,15 @@ MonoBehaviour:
   wrongClip: {fileID: 8300000, guid: ddc0fe2d45c8ccd4b8ce29f5d69beec0, type: 3}
   slot_1: {fileID: 1719204623}
   slot_2: {fileID: 67436907}
-  middleAudioclips: []
+  middleAudioclips:
+  - {fileID: 8300000, guid: f904688c1b78c8241befce81339e26ad, type: 3}
+  - {fileID: 8300000, guid: 39ab3b74a6a3f3e46a659205d48b2979, type: 3}
+  - {fileID: 8300000, guid: a23cc3444fb264e4e9b37044e50c55a6, type: 3}
+  middleLetterTriggers:
+  - at_trigger
+  - cat_trigger
+  - mat_trigger
+  lipAnimator: {fileID: 1993430528}
   _wfc: {fileID: 3517327273548087393}
 --- !u!1 &1415128149
 GameObject:
@@ -35336,8 +35270,8 @@ GameObject:
   - component: {fileID: 1456725841}
   - component: {fileID: 1456725840}
   - component: {fileID: 1456725839}
-  - component: {fileID: 1456725838}
   - component: {fileID: 1456725837}
+  - component: {fileID: 1456725838}
   m_Layer: 5
   m_Name: m
   m_TagString: left
@@ -35469,11 +35403,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1456725835}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a36c1efc96333e241b77a18cc8de7cfb, type: 3}
+  m_Script: {fileID: 11500000, guid: fb96d107dc808ee45b62812573342c9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 1456725837}
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: bb4505f71634a954b8d8a1ec54a3f266, type: 3}
+  Juice_mouth: {fileID: 1993430528}
+  triggerWord: m_trigger
 --- !u!114 &1456725839
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35766,7 +35702,7 @@ MonoBehaviour:
   audioSource: {fileID: 1461501115}
   clip: {fileID: 8300000, guid: 122918cf2e65f144aa707ffb01844659, type: 3}
   Juice_mouth: {fileID: 1993430528}
-  triggerWord: at_trigger
+  triggerWord: et_trigger
 --- !u!1 &1476006645
 GameObject:
   m_ObjectHideFlags: 0
@@ -50844,9 +50780,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 1599543244}
-  clip: {fileID: 8300000, guid: 3abb002360c1ce149bd99ac002c0247c, type: 3}
+  clip: {fileID: 8300000, guid: 587e5b922ce52a342980d957af41bce8, type: 3}
   Juice_mouth: {fileID: 1993430528}
-  triggerWord: a_trigger
+  triggerWord: o_trigger
 --- !u!82 &1599543244
 AudioSource:
   m_ObjectHideFlags: 0
@@ -50994,7 +50930,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 715146338256538419, guid: 2bb46f6e26e9ec148bae60bc177aad29, type: 3}
+  m_Sprite: {fileID: -7287117312637831342, guid: 2bb46f6e26e9ec148bae60bc177aad29,
+    type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -51086,7 +51023,15 @@ MonoBehaviour:
   wrongClip: {fileID: 8300000, guid: ddc0fe2d45c8ccd4b8ce29f5d69beec0, type: 3}
   slot_1: {fileID: 1575553840}
   slot_2: {fileID: 341925419}
-  middleAudioclips: []
+  middleAudioclips:
+  - {fileID: 8300000, guid: 4f21e7ebf4b84c6468367043ed149410, type: 3}
+  - {fileID: 8300000, guid: 3bce831910be2e8439aaec78886c64cd, type: 3}
+  - {fileID: 8300000, guid: 0f6860eff73eb7a4c8bcd5dee2c9aa98, type: 3}
+  middleLetterTriggers:
+  - it_trigger
+  - bit_trigger
+  - fit_trigger
+  lipAnimator: {fileID: 1993430528}
   _wfc: {fileID: 3517327273548087393}
 --- !u!1 &1621143081
 GameObject:
@@ -51101,8 +51046,8 @@ GameObject:
   - component: {fileID: 1621143087}
   - component: {fileID: 1621143086}
   - component: {fileID: 1621143085}
-  - component: {fileID: 1621143084}
   - component: {fileID: 1621143083}
+  - component: {fileID: 1621143084}
   m_Layer: 5
   m_Name: b
   m_TagString: left
@@ -51234,11 +51179,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1621143081}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a36c1efc96333e241b77a18cc8de7cfb, type: 3}
+  m_Script: {fileID: 11500000, guid: fb96d107dc808ee45b62812573342c9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 1621143083}
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: 255bbdeea3a281246bc275f7261b578f, type: 3}
+  Juice_mouth: {fileID: 1993430528}
+  triggerWord: b_trigger
 --- !u!114 &1621143085
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51290,7 +51237,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1991749343981002167, guid: 2bb46f6e26e9ec148bae60bc177aad29,
+  m_Sprite: {fileID: -3639932168508871848, guid: 2bb46f6e26e9ec148bae60bc177aad29,
     type: 3}
   m_Type: 0
   m_PreserveAspect: 1
@@ -51707,10 +51654,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb96d107dc808ee45b62812573342c9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 0}
-  clip: {fileID: 0}
-  Juice_mouth: {fileID: 0}
-  triggerWord: 
+  audioSource: {fileID: 1682857829}
+  clip: {fileID: 8300000, guid: 4f21e7ebf4b84c6468367043ed149410, type: 3}
+  Juice_mouth: {fileID: 1993430528}
+  triggerWord: it_trigger
 --- !u!1 &1692474060
 GameObject:
   m_ObjectHideFlags: 0
@@ -51778,14 +51725,22 @@ MonoBehaviour:
   rightSlot: {fileID: 1501178435}
   middleLetters:
   - {fileID: 1913325437}
-  - {fileID: 1792843424}
   - {fileID: 2056537455}
+  - {fileID: 1792843424}
   activityAS: {fileID: 3517327275251428428}
   correctClip: {fileID: 8300000, guid: 68e51f092cc9b5b4bbb9c1f2caf83894, type: 3}
   wrongClip: {fileID: 8300000, guid: ddc0fe2d45c8ccd4b8ce29f5d69beec0, type: 3}
   slot_1: {fileID: 1888641492}
   slot_2: {fileID: 464102632}
-  middleAudioclips: []
+  middleAudioclips:
+  - {fileID: 8300000, guid: 122918cf2e65f144aa707ffb01844659, type: 3}
+  - {fileID: 8300000, guid: 71cfcba83006d184c9c554fed27f8751, type: 3}
+  - {fileID: 8300000, guid: d8f24bc77b31c6d41b814be6dc6907db, type: 3}
+  middleLetterTriggers:
+  - et_trigger
+  - set_trigger
+  - met_trigger
+  lipAnimator: {fileID: 1993430528}
   _wfc: {fileID: 3517327273548087393}
 --- !u!1 &1700752158
 GameObject:
@@ -56879,14 +56834,22 @@ MonoBehaviour:
   rightSlot: {fileID: 297727197}
   middleLetters:
   - {fileID: 893910407}
-  - {fileID: 750817712}
   - {fileID: 588954467}
+  - {fileID: 750817712}
   activityAS: {fileID: 3517327275251428428}
   correctClip: {fileID: 8300000, guid: 68e51f092cc9b5b4bbb9c1f2caf83894, type: 3}
   wrongClip: {fileID: 8300000, guid: ddc0fe2d45c8ccd4b8ce29f5d69beec0, type: 3}
   slot_1: {fileID: 1546599855}
   slot_2: {fileID: 468507802}
-  middleAudioclips: []
+  middleAudioclips:
+  - {fileID: 8300000, guid: 19e06ab049147264c9fae3ce94f25990, type: 3}
+  - {fileID: 8300000, guid: 9e10e3ae60dce2a46b79debfac14cf0b, type: 3}
+  - {fileID: 8300000, guid: 48948b05bb0da91439cc1a259e1048c5, type: 3}
+  middleLetterTriggers:
+  - ot_trigger
+  - pot_trigger
+  - hot_trigger
+  lipAnimator: {fileID: 1993430528}
   _wfc: {fileID: 3517327273548087393}
 --- !u!1 &1739426871
 GameObject:
@@ -57002,6 +56965,7 @@ GameObject:
   - component: {fileID: 1745929697}
   - component: {fileID: 1745929696}
   - component: {fileID: 1745929695}
+  - component: {fileID: 1745929700}
   m_Layer: 5
   m_Name: ot_1
   m_TagString: right
@@ -57194,6 +57158,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1745929693}
   m_CullTransparentMesh: 0
+--- !u!114 &1745929700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1745929693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb96d107dc808ee45b62812573342c9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 1745929695}
+  clip: {fileID: 8300000, guid: 19e06ab049147264c9fae3ce94f25990, type: 3}
+  Juice_mouth: {fileID: 1993430528}
+  triggerWord: ot_trigger
 --- !u!1 &1748639330
 GameObject:
   m_ObjectHideFlags: 0
@@ -57297,6 +57277,7 @@ GameObject:
   - component: {fileID: 1768800426}
   - component: {fileID: 1768800425}
   - component: {fileID: 1768800424}
+  - component: {fileID: 1768800429}
   m_Layer: 5
   m_Name: ot
   m_TagString: right
@@ -57489,6 +57470,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1768800422}
   m_CullTransparentMesh: 0
+--- !u!114 &1768800429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1768800422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb96d107dc808ee45b62812573342c9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 1768800424}
+  clip: {fileID: 8300000, guid: 19e06ab049147264c9fae3ce94f25990, type: 3}
+  Juice_mouth: {fileID: 1993430528}
+  triggerWord: ot_trigger
 --- !u!1 &1792843424
 GameObject:
   m_ObjectHideFlags: 0
@@ -57797,7 +57794,6 @@ RectTransform:
   - {fileID: 6250153071707994621}
   - {fileID: 1311888379554376132}
   - {fileID: 1057285741}
-  - {fileID: 694803578}
   m_Father: {fileID: 2996115347935437161}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -64209,8 +64205,8 @@ GameObject:
   - component: {fileID: 2007657795}
   - component: {fileID: 2007657794}
   - component: {fileID: 2007657793}
-  - component: {fileID: 2007657797}
   - component: {fileID: 2007657798}
+  - component: {fileID: 2007657797}
   m_Layer: 5
   m_Name: m
   m_TagString: left
@@ -64316,11 +64312,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 2007657791}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a36c1efc96333e241b77a18cc8de7cfb, type: 3}
+  m_Script: {fileID: 11500000, guid: fb96d107dc808ee45b62812573342c9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 2007657798}
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: bb4505f71634a954b8d8a1ec54a3f266, type: 3}
+  Juice_mouth: {fileID: 1993430528}
+  triggerWord: m_trigger
 --- !u!82 &2007657798
 AudioSource:
   m_ObjectHideFlags: 0
@@ -71509,7 +71507,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &3517327273548087390
 RectTransform:
   m_ObjectHideFlags: 0
@@ -78286,7 +78284,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad21cf64dcff3f04e92c07cf2155b2dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wheel: {fileID: 0}
+  wheel: {fileID: 1798995424}
   audioSource: {fileID: 6250153073118782027}
   audios:
   - {fileID: 8300000, guid: fce129c08d6c2fa44a16f1b1edf40af6, type: 3}
@@ -78318,7 +78316,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6250153071707994621
 RectTransform:
   m_ObjectHideFlags: 0
@@ -78361,7 +78359,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: dfe0222a4ee1a914698514388080739a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 377857ef5ee003e47be20ca518f7a304, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

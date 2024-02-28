@@ -19,18 +19,19 @@ public class WordFormationController : MonoBehaviour
    public IEnumerator LetterSetSwitchRoutine()
    {
         transitionEffect.SetActive(true);
-        yield return new WaitForSeconds(1f);
-        if(letterSetChildIndex < letterSetsHolder.Length -1)
+        yield return new WaitForSeconds(2f);
+        if(letterSetChildIndex < letterSetsHolder.Length-1)
         {
             letterSetsHolder[letterSetChildIndex].gameObject.SetActive(false);
-            letterSetChildIndex ++;
+            letterSetChildIndex++;
             transitionEffect.SetActive(false);
             letterSetsHolder[letterSetChildIndex].gameObject.SetActive(true);
         }
-        if(letterSetChildIndex == letterSetsHolder.Length -1)
+        else
         {
             G_final.SetActive(true);
         }
+        
    }
 
 

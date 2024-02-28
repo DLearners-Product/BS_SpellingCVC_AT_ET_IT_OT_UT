@@ -17,6 +17,8 @@ public class LetterSetController : MonoBehaviour
     [SerializeField] private ParticleSystem slot_1;
     [SerializeField] private ParticleSystem slot_2;
     [SerializeField] private List<AudioClip> middleAudioclips;
+    [SerializeField] private List<string> middleLetterTriggers;
+    [SerializeField] private Animator lipAnimator;
     private int leftLettersIndex, rightLettersIndex, middleLettersIndex;
     private int lettercount = 0;
     [SerializeField] private WordFormationController _wfc;
@@ -64,6 +66,8 @@ public class LetterSetController : MonoBehaviour
             drag.transform.position = drop.transform.position;
             drag.GetComponent<ImageDragandDrop>().resetPositionOnDrop = false;
             drag.GetComponent<ImageDragandDrop>().canDrag = false;
+            activityAS.clip = correctClip;
+            activityAS.Play();
 
             if (drag.tag == "left")
             {
@@ -86,6 +90,8 @@ public class LetterSetController : MonoBehaviour
         else
         {
             LetterDragReset(drag);
+            activityAS.clip = wrongClip;
+            activityAS.Play();
         }
     }
 
@@ -99,6 +105,9 @@ public class LetterSetController : MonoBehaviour
     {
         yield return new WaitForSeconds(1.0f); // Adjust the delay as needed
         middleLetters[middleLettersIndex].SetActive(true);
+        activityAS.clip = middleAudioclips[middleLettersIndex];
+        activityAS.Play();
+        lipAnimator.SetTrigger(middleLetterTriggers[middleLettersIndex]);
         leftLetters[leftLettersIndex].SetActive(false);
         rightLetters[rightLettersIndex].SetActive(false);
         Debug.Log("middle letter display");
