@@ -136,10 +136,9 @@ public class VowelSlide : MonoBehaviour
             vowelActivitySource.Play();
             yield return new WaitForSeconds(1f);
             StartCoroutine(VowelImagesDissapearRoutine(index));
+            displayedImageIndex ++;
             yield return new WaitForSeconds(0.5f);
             StartCoroutine(HandOpenRoutine());
-            Debug.Log("current Index" + index);
-            displayedImageIndex ++;
         }
         if( displayedImageIndex == 5)
         {

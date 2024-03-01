@@ -21,11 +21,11 @@ public class intro_cvc : MonoBehaviour
         for (int i = 0; i < GA_Objects.Length; i++)
         {
             GA_Objects[i].SetActive(false);
-            GA_Images[i].SetActive(false);
+            // GA_Images[i].SetActive(false);
             if (GA_Objects[i].name==G_selectedObject.name)
             {
                 GA_Objects[i].SetActive(true);
-                GA_Images[i].SetActive(true);
+                // GA_Images[i].SetActive(true);
             }
         }
     }
