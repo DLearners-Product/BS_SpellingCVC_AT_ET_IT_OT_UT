@@ -35,7 +35,9 @@ public class AuditoryActiviry : MonoBehaviour
         }
         else
         {
+            questionTexts[q_count].SetActive(false);
             q_count ++;
+            questionTexts[q_count].SetActive(true);
             auditoryAS.clip = instructionClips[q_count];
         }
     }
