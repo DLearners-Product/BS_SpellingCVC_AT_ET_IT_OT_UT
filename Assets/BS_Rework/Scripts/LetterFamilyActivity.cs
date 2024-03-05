@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using TMPro;
 
 public class LetterFamilyActivity : MonoBehaviour
 {
@@ -13,30 +14,39 @@ public class LetterFamilyActivity : MonoBehaviour
     public GameObject answerParent, answerImageParent;
     public Sprite[] answerSprites;
     public GameObject answerImage;
+    public TextMeshProUGUI counterText;
     public Button nextButton;
     public Button backButton;
     public GameObject G_final;
-    private int index;
+    private int index,count;
+    private int correct_count;
     private string wordFamilyName;
     private GameObject selectedGameObject;
     [SerializeField] private Animator ballAnimator, ballAnimator_1;
 
+
     private void Start() 
     {
         index = 0;
+        count = 1;
+        correct_count = 0;
+        counterText.text = count + "/8";
         audioSource.clip = questionClips[index];
         answerParent.SetActive(false);
     }
 
     public void Next()
     {
-        if(index >= questionClips.Length -1)
+        if(index >= questionClips.Length -1 && correct_count == 8)
         {
-            G_final.SetActive(true);
+            //G_final.SetActive(true);
+            nextButton.gameObject.SetActive(false);
         }
         else
         {
             index ++;
+            count++;
+            counterText.text = count + "/8";
             audioSource.clip = questionClips[index];
         }
     }
@@ -46,11 +56,15 @@ public class LetterFamilyActivity : MonoBehaviour
         {
             index = 0;
             audioSource.clip = questionClips[index];
+            backButton.gameObject.SetActive(false);
         }
         else
         {
             index --;
+            count --;
+            counterText.text = count + "/8";
             audioSource.clip = questionClips[index];
+            nextButton.gameObject.SetActive(true);
         }
     }
     public void QuestionAudioPlay()
@@ -74,6 +88,12 @@ public class LetterFamilyActivity : MonoBehaviour
             audioSource.clip = correctAnsAudClip;
             audioSource.Play();
             StartCoroutine(AnswerImageDisplayRoutine());
+            correct_count++;
+            if(correct_count == 8)
+            {
+                G_final.SetActive(true);
+                
+            }
         }
         else
         {

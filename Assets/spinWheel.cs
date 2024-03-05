@@ -15,6 +15,7 @@ public class spinWheel : MonoBehaviour
     [SerializeField] private TextMeshProUGUI clickedText;
     [SerializeField] private TextMeshProUGUI spinText;
     public GameObject wordPanel;
+    public GameObject textTableBlocker;
     int count;
 
     public void Spin()
@@ -28,6 +29,7 @@ public class spinWheel : MonoBehaviour
     {
         GameObject currentObject = EventSystem.current.currentSelectedGameObject;
         clickedText.text = currentObject.name;
+        textTableBlocker.SetActive(true);
         Debug.Log(currentObject.name);
     }
 
@@ -57,6 +59,7 @@ public class spinWheel : MonoBehaviour
                 yield return new WaitForSeconds(1.5f);
                 wordPanel.SetActive(false);
                 WordPanelTextClear();
+                textTableBlocker.SetActive(false);
                 break;
 
             case 1:
