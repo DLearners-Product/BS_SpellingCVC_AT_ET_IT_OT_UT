@@ -71,8 +71,9 @@ public class spinWheel : MonoBehaviour
                 yield return new WaitForSeconds(1.5f);
                 WordPanelEnable();
                 yield return new WaitForSeconds(1.5f);
-                WordPanelTextClear();
                 wordPanel.SetActive(false);
+                WordPanelTextClear();
+                textTableBlocker.SetActive(false);
                 break;
 
             case 2:
@@ -84,8 +85,9 @@ public class spinWheel : MonoBehaviour
                 yield return new WaitForSeconds(1.5f);
                 WordPanelEnable();
                 yield return new WaitForSeconds(1.5f);
-                WordPanelTextClear();
                 wordPanel.SetActive(false);
+                WordPanelTextClear();
+                textTableBlocker.SetActive(false);
                 break;
 
             case 3:
@@ -99,6 +101,7 @@ public class spinWheel : MonoBehaviour
                 yield return new WaitForSeconds(1.5f);
                 wordPanel.SetActive(false);
                 WordPanelTextClear();
+                textTableBlocker.SetActive(false);
                 break;
 
             case 4:
@@ -112,6 +115,7 @@ public class spinWheel : MonoBehaviour
                 yield return new WaitForSeconds(1.5f);
                 wordPanel.SetActive(false);
                 WordPanelTextClear();
+                textTableBlocker.SetActive(false);
                 break;
         }
     }

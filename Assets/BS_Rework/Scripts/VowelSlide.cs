@@ -10,6 +10,7 @@ public class VowelSlide : MonoBehaviour
     [SerializeField] private List<GameObject> letterObjects;
     [SerializeField] private List<GameObject> vowelImages;
     [SerializeField] private List<string> letterDissapearAnimationTriggers;
+    [SerializeField] private List<string> letterAppearAnimationTriggers;
     private int letterIndex, imageIndex, animationTriggersIndex;
     private Animator handAnimator;
     [SerializeField] private GameObject imagePanel;
@@ -29,7 +30,11 @@ public class VowelSlide : MonoBehaviour
         if (!isHandOpen)
         {
             handAnimator.SetTrigger("Hand_Open");
-            isHandOpen = false;
+        }
+        else
+        {
+            handAnimator.ResetTrigger("Hand_Close");
+            handAnimator.ResetTrigger("Hand_Open");
         }
     }
 
@@ -38,6 +43,7 @@ public class VowelSlide : MonoBehaviour
         yield return new WaitForSeconds(1f);
         HandOpen();
         isHandOpen = true;
+        handShouldClose = false;
         yield return new WaitForSeconds(0.25f);
         StartCoroutine(LettersAppearAnimRoutine());
     }
@@ -46,8 +52,6 @@ public class VowelSlide : MonoBehaviour
         if (handShouldClose)
         {
             handAnimator.SetTrigger("Hand_Close");
-
-            handShouldClose = false;
         }
         else
         {
@@ -59,6 +63,7 @@ public class VowelSlide : MonoBehaviour
     {
         yield return new WaitForSeconds(delay + 1f);
         handShouldClose = true;
+        isHandOpen = false;
         HandClose();
     }
     void LettersAppearAnimationFunct()
@@ -96,8 +101,14 @@ public class VowelSlide : MonoBehaviour
             if (letterIndex <= letterObjects.Count)
             {
                 currentLetterAnimator.SetTrigger(letterDissapearAnimationTriggers[animationTriggersIndex]);
+                currentLetter.SetActive(false);
                 animationTriggersIndex++;
                 letterIndex++;
+            }
+            else
+            {
+
+                currentLetterAnimator.ResetTrigger(letterDissapearAnimationTriggers[animationTriggersIndex]);
             }
         }
     }
