@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class VowelSlide : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class VowelSlide : MonoBehaviour
     [SerializeField] private List<string> letterAppearAnimationTriggers;
     private int letterIndex, imageIndex, animationTriggersIndex;
     private Animator handAnimator;
+    private List<GameObject> tempList;
     [SerializeField] private GameObject imagePanel;
     private int displayedImageIndex = 0;
     [SerializeField] private AudioClip[] vowelObjectClips;
@@ -23,6 +25,7 @@ public class VowelSlide : MonoBehaviour
     {
         handAnimator = hand.GetComponent<Animator>();
         StartCoroutine(HandOpenRoutine());
+        tempList = new List<GameObject>();
     }
 
     void HandOpen()
@@ -33,19 +36,20 @@ public class VowelSlide : MonoBehaviour
         }
         else
         {
-            handAnimator.ResetTrigger("Hand_Close");
+            // handAnimator.ResetTrigger("Hand_Close");
             handAnimator.ResetTrigger("Hand_Open");
         }
     }
 
     private IEnumerator HandOpenRoutine()
     {
+        float delay = 0.25f;
         yield return new WaitForSeconds(1f);
         HandOpen();
         isHandOpen = true;
         handShouldClose = false;
         yield return new WaitForSeconds(0.25f);
-        StartCoroutine(LettersAppearAnimRoutine());
+        StartCoroutine(LettersAppearAnimRoutine(delay));
     }
     void HandClose()
     {
@@ -56,7 +60,6 @@ public class VowelSlide : MonoBehaviour
         else
         {
             handAnimator.ResetTrigger("Hand_Close");
-            handAnimator.ResetTrigger("Hand_Open");
         }
     }
     private IEnumerator HandCloseRoutine(float delay)
@@ -69,59 +72,54 @@ public class VowelSlide : MonoBehaviour
     void LettersAppearAnimationFunct()
     {
         Animator currentLetterAnimator = letterObjects[letterIndex].GetComponent<Animator>();
-        GameObject currentLetter = letterObjects[letterIndex].gameObject;
+        //GameObject currentLetter = letterObjects[letterIndex].gameObject;
         if (!isLetterappeared)
         {
-            if (letterIndex <= letterObjects.Count)
-            {
-                currentLetter.SetActive(true);
-                letterIndex++;
-                // Debug.Log("Letter index :" + letterIndex);
-            }
+           
+            currentLetterAnimator.SetTrigger(letterAppearAnimationTriggers[animationTriggersIndex]);
+            Debug.Log(letterAppearAnimationTriggers[animationTriggersIndex]);
+            //currentLetter.SetActive(true);
+            animationTriggersIndex++;
+            letterIndex++;
         }
     }
-    private IEnumerator LettersAppearAnimRoutine()
+    private IEnumerator LettersAppearAnimRoutine(float delay)
     {
-        Debug.Log("Current letter index: " + letterIndex);
+        yield return new WaitForSeconds(delay);
+        Debug.Log("Letter Routine");
         while (!isLetterappeared && letterIndex < letterObjects.Count)
         {
             yield return new WaitForSeconds(0.15f);
             LettersAppearAnimationFunct();
         }
         letterIndex = 0;
+        animationTriggersIndex = 0;
         isLetterappeared = true;
     }
     void LetterDissappearAnimationFunct()
     {
         Animator currentLetterAnimator = letterObjects[letterIndex].GetComponent<Animator>();
-        GameObject currentLetter = letterObjects[letterIndex].gameObject;
+        //GameObject currentLetter = letterObjects[letterIndex].gameObject;
         if (isLetterappeared)
         {
-
-            if (letterIndex <= letterObjects.Count)
-            {
-                currentLetterAnimator.SetTrigger(letterDissapearAnimationTriggers[animationTriggersIndex]);
-                currentLetter.SetActive(false);
-                animationTriggersIndex++;
-                letterIndex++;
-            }
-            else
-            {
-
-                currentLetterAnimator.ResetTrigger(letterDissapearAnimationTriggers[animationTriggersIndex]);
-            }
+            currentLetterAnimator.SetTrigger(letterDissapearAnimationTriggers[animationTriggersIndex]);
+            //currentLetter.SetActive(false);
+            animationTriggersIndex++;
+            letterIndex++;
         }
     }
     private IEnumerator LetterDissappearAnimRoutine(float delay)
     {
         yield return new WaitForSeconds (delay);
+        Debug.Log("Letter Hide Routine");
         while (isLetterappeared && animationTriggersIndex < letterDissapearAnimationTriggers.Count)
         {
             yield return new WaitForSeconds(0.05f);
             LetterDissappearAnimationFunct();
         }
-          letterIndex = 0;
-          isLetterappeared = false;
+        letterIndex = 0;
+        animationTriggersIndex = 0;
+        isLetterappeared = false;
     }
 
     public void VowelImagesShowAndHideFunction(int index)
@@ -134,8 +132,10 @@ public class VowelSlide : MonoBehaviour
         yield return new WaitForSeconds(0f);
         imageIndex = index;
         int clipIndex = imageIndex;
-        if (imageIndex < vowelImages.Count)
+        if (displayedImageIndex < vowelImages.Count)
         {
+            Debug.Log(displayedImageIndex);
+            displayedImageIndex ++;
             float handcloseDelay = 0.5f;
             float letterDissapearDelay = 0.5f;
             StartCoroutine(HandCloseRoutine(handcloseDelay));
@@ -145,19 +145,19 @@ public class VowelSlide : MonoBehaviour
             vowelImages[imageIndex].SetActive(true);
             vowelActivitySource.clip = vowelObjectClips[clipIndex];
             vowelActivitySource.Play();
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(1.0f);
             StartCoroutine(VowelImagesDissapearRoutine(index));
-            displayedImageIndex ++;
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(2.0f);
             StartCoroutine(HandOpenRoutine());
+        
         }
-        if( displayedImageIndex == 5)
+        if( displayedImageIndex == vowelImages.Count)
         {
-            float delay = 2f;
+           G_finalPanel.SetActive(true);
+           float delay = 0f;
            StartCoroutine(LetterDissappearAnimRoutine(delay));
            StartCoroutine(HandCloseRoutine(delay));
-           displayedImageIndex = 0;
-           G_finalPanel.SetActive(true);
+           yield break;
         }
     }
 
@@ -166,8 +166,9 @@ public class VowelSlide : MonoBehaviour
         yield return new WaitForSeconds (2f);
         vowelImages[imageIndex].SetActive(false);
         imagePanel.GetComponent<Animator>().SetTrigger("PanelTrigger");
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(1.0f);
         imagePanel.SetActive(false);
+          
     }
 
 
