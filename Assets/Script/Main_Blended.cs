@@ -38,7 +38,7 @@ public class Main_Blended : MonoBehaviour
 
 
     public VideoPlayer Videoplayerinlevel;
-    bool B_pause;
+    public bool B_pause;
 
 
 
@@ -771,11 +771,13 @@ public class Main_Blended : MonoBehaviour
 
     public void THI_cloneLevels()
     {
+        B_pause = true;
         if (G_currenlevel != null)
         {
             Destroy(G_currenlevel);
         }
-        var currentLevel = Instantiate(GA_levelsIG[levelno]);
+        // var currentLevel = Instantiate(GA_levelsIG[levelno]);
+        var currentLevel = Instantiate(MainBlendedData.instance.slideDatas[levelno].slideObject);
         currentLevel.transform.SetParent(GameObject.Find("Game_Panel").transform, false);
         currentLevel.transform.SetAsFirstSibling();
         G_currenlevel = currentLevel;
