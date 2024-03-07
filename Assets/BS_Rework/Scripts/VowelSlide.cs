@@ -156,7 +156,7 @@ public class VowelSlide : MonoBehaviour
            G_finalPanel.SetActive(true);
            float delay = 0f;
            StartCoroutine(LetterDissappearAnimRoutine(delay));
-           StartCoroutine(HandCloseRoutine(delay));
+           //StartCoroutine(HandCloseRoutine(delay));
            yield break;
         }
     }

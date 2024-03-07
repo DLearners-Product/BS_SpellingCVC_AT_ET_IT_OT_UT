@@ -16,12 +16,18 @@ public class spinWheel : MonoBehaviour
     [SerializeField] private TextMeshProUGUI spinText;
     public GameObject wordPanel;
     public GameObject textTableBlocker;
-    int count;
+    int count, lastcount;
+    public Button spinButton;
 
+    private void Start() 
+    {
+        spinButton.interactable = false;
+    }
     public void Spin()
     {
         StartCoroutine(playSpinAnimation());
         count = Random.Range(0,5);
+        spinButton.interactable = false;
 
     }
 
@@ -30,6 +36,7 @@ public class spinWheel : MonoBehaviour
         GameObject currentObject = EventSystem.current.currentSelectedGameObject;
         clickedText.text = currentObject.name;
         textTableBlocker.SetActive(true);
+        spinButton.interactable = true;
         Debug.Log(currentObject.name);
     }
 

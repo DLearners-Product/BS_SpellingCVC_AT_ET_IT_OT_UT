@@ -15,8 +15,6 @@ public class LetterFamilyActivity : MonoBehaviour
     public Sprite[] answerSprites;
     public GameObject answerImage;
     public TextMeshProUGUI counterText;
-    public Button nextButton;
-    public Button backButton;
     public GameObject G_final;
     private int index,count;
     private int correct_count;
@@ -35,38 +33,6 @@ public class LetterFamilyActivity : MonoBehaviour
         answerParent.SetActive(false);
     }
 
-    public void Next()
-    {
-        if(index >= questionClips.Length -1 && correct_count == 8)
-        {
-            //G_final.SetActive(true);
-            nextButton.gameObject.SetActive(false);
-        }
-        else
-        {
-            index ++;
-            count++;
-            counterText.text = count + "/8";
-            audioSource.clip = questionClips[index];
-        }
-    }
-    public void Back()
-    {
-        if(index <= 0)
-        {
-            index = 0;
-            audioSource.clip = questionClips[index];
-            backButton.gameObject.SetActive(false);
-        }
-        else
-        {
-            index --;
-            count --;
-            counterText.text = count + "/8";
-            audioSource.clip = questionClips[index];
-            nextButton.gameObject.SetActive(true);
-        }
-    }
     public void QuestionAudioPlay()
     {
         audioSource.clip = questionClips[index];
@@ -89,11 +55,7 @@ public class LetterFamilyActivity : MonoBehaviour
             audioSource.Play();
             StartCoroutine(AnswerImageDisplayRoutine());
             correct_count++;
-            if(correct_count == 8)
-            {
-                G_final.SetActive(true);
-                
-            }
+            Invoke("QuestionSwitch", 1f);
         }
         else
         {
@@ -111,6 +73,28 @@ public class LetterFamilyActivity : MonoBehaviour
         answerImage.GetComponent<Image>().sprite = answerSprites[index];
         yield return new WaitForSeconds(1.0f);
         answerImageParent.SetActive(false);
+    }
+
+    private void QuestionSwitch()
+    {
+         if(index >= questionClips.Length -1 && correct_count == 8)
+        {
+            FinalScreenShow();
+        }
+        else
+        {
+            index ++;
+            count++;
+            counterText.text = count + "/8";
+            audioSource.clip = questionClips[index];
+        }
+    }
+
+    private void FinalScreenShow()
+    {
+        
+        G_final.SetActive(true);
+                
     }
 
 }
