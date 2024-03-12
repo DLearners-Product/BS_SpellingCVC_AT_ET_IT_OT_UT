@@ -16,8 +16,9 @@ public class spinWheel : MonoBehaviour
     [SerializeField] private TextMeshProUGUI spinText;
     public GameObject wordPanel;
     public GameObject textTableBlocker;
-    int count, lastcount;
+    int count;
     public Button spinButton;
+    public AudioClip spinAudio;
 
     private void Start() 
     {
@@ -33,6 +34,7 @@ public class spinWheel : MonoBehaviour
 
     public void clickedTextSetter()
     {
+        wheel.GetComponent<Animator>().Rebind();
         GameObject currentObject = EventSystem.current.currentSelectedGameObject;
         clickedText.text = currentObject.name;
         textTableBlocker.SetActive(true);
@@ -53,13 +55,13 @@ public class spinWheel : MonoBehaviour
 
     IEnumerator playSpinAnimation()
     {
+        // wheel.GetComponent<Animator>().Rebind();
         switch (count)
         {
+            
             case 0:
                 wheel.GetComponent<Animator>().Play("wheel_anim_1");
                 yield return new WaitForSeconds(spinAnimation[0].length);
-                // audioSource.clip = audios[0];
-                // audioSource.Play();
                 spinText.text = "et";
                 yield return new WaitForSeconds(1.5f);
                 WordPanelEnable();

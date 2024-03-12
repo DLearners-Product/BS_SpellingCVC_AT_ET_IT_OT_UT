@@ -81,8 +81,6 @@ public class PurplePalace : MonoBehaviour
             selectedGameobject_2 = EventSystem.current.currentSelectedGameObject;
             selectedGameobject_2.GetComponent<Button>().enabled = false;
             selectedGameobject_2.GetComponent<Animator>().Play("purple_slot_anim");
-
-
             StartCoroutine(CheckAnswer());
 
         }
@@ -132,14 +130,8 @@ public class PurplePalace : MonoBehaviour
             selectedGameobject_2.transform.Find("piece").GetComponent<Image>().color = new Color32(255, 255, 255, 255);
 
             yield return new WaitForSeconds(0.5f);
-
-            selectedGameobject_1.GetComponent<Animator>().Play("purple_slot_close_anim");
-            selectedGameobject_2.GetComponent<Animator>().Play("purple_slot_close_anim");
-
-            yield return new WaitForSeconds(slot_close_anim.length);
-
-            selectedGameobject_1.SetActive(false);
-            selectedGameobject_2.SetActive(false);
+            selectedGameobject_1.GetComponent<Button>().interactable = false;
+            selectedGameobject_2.GetComponent<Button>().interactable = false;
 
 
             for (int i = 0; i < AllSlots.Length; i++)
