@@ -55,7 +55,7 @@ public class LetterFamilyActivity : MonoBehaviour
             audioSource.Play();
             StartCoroutine(AnswerImageDisplayRoutine());
             correct_count++;
-            Invoke("QuestionSwitch", 1f);
+            Invoke("QuestionSwitch", 2.5f);
         }
         else
         {
@@ -70,9 +70,11 @@ public class LetterFamilyActivity : MonoBehaviour
     {
         yield return new WaitForSeconds(2.0f);
         answerImageParent.SetActive(true);
+        Debug.Log("this image index " + index);
         answerImage.GetComponent<Image>().sprite = answerSprites[index];
         yield return new WaitForSeconds(1.0f);
         answerImageParent.SetActive(false);
+        yield return new WaitForSeconds(1.0f);
     }
 
     private void QuestionSwitch()

@@ -48,7 +48,7 @@ public class PurplePalace : MonoBehaviour
             AllSlots[i].GetComponent<Animator>().Play("purple_slot_anim");
         }
 
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(10f);
         for (int i = 0; i < AllSlots.Length; i++)
         {
             AllSlots[i].SetActive(true);

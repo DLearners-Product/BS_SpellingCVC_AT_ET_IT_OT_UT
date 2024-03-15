@@ -23,9 +23,11 @@ public class spinWheel : MonoBehaviour
     private void Start() 
     {
         spinButton.interactable = false;
+        wheel.GetComponent<AudioSource>().clip = spinAudio;
     }
     public void Spin()
     {
+        wheel.GetComponent<AudioSource>().PlayOneShot(spinAudio);
         StartCoroutine(playSpinAnimation());
         count = Random.Range(0,5);
         spinButton.interactable = false;
