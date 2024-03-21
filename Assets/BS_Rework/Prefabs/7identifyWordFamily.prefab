@@ -114577,6 +114577,8 @@ MonoBehaviour:
   G_final: {fileID: 3425182407544843542}
   ballAnimator: {fileID: 8116883713384156693}
   ballAnimator_1: {fileID: 8116883712214980416}
+  questionGO: {fileID: 0}
+  optionsGO: []
 --- !u!1 &7102235147509451854
 GameObject:
   m_ObjectHideFlags: 0

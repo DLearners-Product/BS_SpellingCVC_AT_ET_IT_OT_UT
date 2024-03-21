@@ -35,10 +35,20 @@ public class LetterSetController : MonoBehaviour
     private IEnumerator ArrowAndSlotSwapRoutine()
     {
         Debug.Log("Routine trigger");
+        for(int i = 0; i < leftLetters.Count; i++)
+        {
+            leftLetters[i].GetComponent<ImageDragandDrop>().canDrag = false;
+            rightLetters[i].GetComponent<ImageDragandDrop>().canDrag = false;
+        }
         yield return new WaitForSeconds(1.5f);
         arrow.gameObject.SetActive(false);
         leftSlot.SetActive(true);
         rightSlot.SetActive(true);
+        for(int i = 0; i < leftLetters.Count; i++)
+        {
+            leftLetters[i].GetComponent<ImageDragandDrop>().canDrag = true;
+            rightLetters[i].GetComponent<ImageDragandDrop>().canDrag = true;
+        }
     }
     private IEnumerator SlotAndArrowSwapRoutine()
     {

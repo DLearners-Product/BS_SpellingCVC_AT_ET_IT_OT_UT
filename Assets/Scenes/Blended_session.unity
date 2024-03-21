@@ -543,7 +543,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 862, y: -504}
+  m_AnchoredPosition: {x: 862, y: -461}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &337096557
@@ -589,15 +589,15 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2067067674}
-        m_MethodName: HTML_next
-        m_Mode: 1
+      - m_Target: {fileID: 2067067677}
+        m_MethodName: SetQAActivityDataID
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: 48
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &337096558
@@ -1760,6 +1760,390 @@ MonoBehaviour:
       optionType: 0
       questions: []
       options: []
+      additionalFields: []
+    dynamicQA:
+      questionType: 3
+      optionType: 1
+      questions:
+      - question:
+          text: ' Remove /c/ what is left?'
+          id: 1
+          _sprite: {fileID: 0}
+          texture2D: {fileID: 0}
+          audioClip: {fileID: 8300000, guid: a1345b7f369a44b44ae149118339d485, type: 3}
+          image_url: 
+          audio_url: 
+        options:
+        - text: at
+          id: 11
+          _sprite: {fileID: 0}
+          texture2D: {fileID: 0}
+          audioClip: {fileID: 0}
+          image_url: 
+          audio_url: 
+          isAnswer: 0
+      - question:
+          text: Remove /p/ what is left?
+          id: 2
+          _sprite: {fileID: 0}
+          texture2D: {fileID: 0}
+          audioClip: {fileID: 8300000, guid: 628d2987aaa0b1344b79ace00b14f30a, type: 3}
+          image_url: 
+          audio_url: 
+        options:
+        - text: at
+          id: 21
+          _sprite: {fileID: 0}
+          texture2D: {fileID: 0}
+          audioClip: {fileID: 0}
+          image_url: 
+          audio_url: 
+          isAnswer: 0
+      - question:
+          text: Remove /h/ what is left?
+          id: 3
+          _sprite: {fileID: 0}
+          texture2D: {fileID: 0}
+          audioClip: {fileID: 8300000, guid: 0b29104a129ca4443a8630b0dc2c286a, type: 3}
+          image_url: 
+          audio_url: 
+        options:
+        - text: it
+          id: 31
+          _sprite: {fileID: 0}
+          texture2D: {fileID: 0}
+          audioClip: {fileID: 0}
+          image_url: 
+          audio_url: 
+          isAnswer: 0
+      - question:
+          text: Remove /w/ what is left?
+          id: 4
+          _sprite: {fileID: 0}
+          texture2D: {fileID: 0}
+          audioClip: {fileID: 8300000, guid: 6f975ca4d479373409a8550a5053567d, type: 3}
+          image_url: 
+          audio_url: 
+        options:
+        - text: it
+          id: 41
+          _sprite: {fileID: 0}
+          texture2D: {fileID: 0}
+          audioClip: {fileID: 0}
+          image_url: 
+          audio_url: 
+          isAnswer: 0
+      - question:
+          text: Remove /n/ what is left?
+          id: 5
+          _sprite: {fileID: 0}
+          texture2D: {fileID: 0}
+          audioClip: {fileID: 8300000, guid: a08643d9d9ae0e242acff19523b82ab7, type: 3}
+          image_url: 
+          audio_url: 
+        options:
+        - text: et
+          id: 51
+          _sprite: {fileID: 0}
+          texture2D: {fileID: 0}
+          audioClip: {fileID: 0}
+          image_url: 
+          audio_url: 
+          isAnswer: 0
+      - question:
+          text: Remove /l/ what is left?
+          id: 6
+          _sprite: {fileID: 0}
+          texture2D: {fileID: 0}
+          audioClip: {fileID: 0}
+          image_url: 
+          audio_url: 
+        options:
+        - text: et
+          id: 61
+          _sprite: {fileID: 0}
+          texture2D: {fileID: 0}
+          audioClip: {fileID: 0}
+          image_url: 
+          audio_url: 
+          isAnswer: 0
+      - question:
+          text: Remove /d/ what is left?
+          id: 7
+          _sprite: {fileID: 0}
+          texture2D: {fileID: 0}
+          audioClip: {fileID: 8300000, guid: 8b764f6403c29fe4cbbde071f467e9ec, type: 3}
+          image_url: 
+          audio_url: 
+        options:
+        - text: ot
+          id: 71
+          _sprite: {fileID: 0}
+          texture2D: {fileID: 0}
+          audioClip: {fileID: 8300000, guid: bf5befb9e41a4224084bf3c43230e38a, type: 3}
+          image_url: 
+          audio_url: 
+          isAnswer: 0
+      - question:
+          text: Remove /n/ what is left?
+          id: 8
+          _sprite: {fileID: 0}
+          texture2D: {fileID: 0}
+          audioClip: {fileID: 8300000, guid: d41605ccbaccef44f8b1750e1cd7d727, type: 3}
+          image_url: 
+          audio_url: 
+        options:
+        - text: ut
+          id: 81
+          _sprite: {fileID: 0}
+          texture2D: {fileID: 0}
+          audioClip: {fileID: 0}
+          image_url: 
+          audio_url: 
+          isAnswer: 0
+      - question:
+          text: Remove /s/ what is left?
+          id: 9
+          _sprite: {fileID: 0}
+          texture2D: {fileID: 0}
+          audioClip: {fileID: 8300000, guid: 4cd22cf2a5a0b8740a3ca1e0dce4ebee, type: 3}
+          image_url: 
+          audio_url: 
+        options:
+        - text: et
+          id: 91
+          _sprite: {fileID: 0}
+          texture2D: {fileID: 0}
+          audioClip: {fileID: 0}
+          image_url: 
+          audio_url: 
+          isAnswer: 0
+      - question:
+          text: Remove /g/ what is left?
+          id: 10
+          _sprite: {fileID: 0}
+          texture2D: {fileID: 0}
+          audioClip: {fileID: 8300000, guid: be8be06248013114e9142fca13e0ac08, type: 3}
+          image_url: 
+          audio_url: 
+        options:
+        - text: ut
+          id: 101
+          _sprite: {fileID: 0}
+          texture2D: {fileID: 0}
+          audioClip: {fileID: 0}
+          image_url: 
+          audio_url: 
+          isAnswer: 0
+      - question:
+          text: Remove /r/ what is left?
+          id: 11
+          _sprite: {fileID: 0}
+          texture2D: {fileID: 0}
+          audioClip: {fileID: 8300000, guid: 0e8639593a4f85841a3b22f725508a57, type: 3}
+          image_url: 
+          audio_url: 
+        options:
+        - text: ot
+          id: 111
+          _sprite: {fileID: 0}
+          texture2D: {fileID: 0}
+          audioClip: {fileID: 0}
+          image_url: 
+          audio_url: 
+          isAnswer: 0
+      - question:
+          text: Remove/f/ what is left?
+          id: 12
+          _sprite: {fileID: 0}
+          texture2D: {fileID: 0}
+          audioClip: {fileID: 8300000, guid: 38ef7ef1c7422b6448379983985ef1df, type: 3}
+          image_url: 
+          audio_url: 
+        options:
+        - text: at
+          id: 121
+          _sprite: {fileID: 0}
+          texture2D: {fileID: 0}
+          audioClip: {fileID: 0}
+          image_url: 
+          audio_url: 
+          isAnswer: 0
+      additionalFields: []
+    staticQAWithSQ:
+      qaWithSubQuestion: []
+  - slideNo: 7
+    activityName: Identify the family
+    hasSubquestion: 0
+    questionType: 1
+    staticQA:
+      questionType: 3
+      optionType: 1
+      questions:
+      - question:
+          text: nut
+          id: 1
+          _sprite: {fileID: 0}
+          texture2D: {fileID: 0}
+          audioClip: {fileID: 0}
+          image_url: 
+          audio_url: 
+        answers:
+        - text: ut
+          id: 11
+          _sprite: {fileID: 0}
+          texture2D: {fileID: 0}
+          audioClip: {fileID: 0}
+          image_url: 
+          audio_url: 
+      - question:
+          text: dot
+          id: 2
+          _sprite: {fileID: 0}
+          texture2D: {fileID: 0}
+          audioClip: {fileID: 0}
+          image_url: 
+          audio_url: 
+        answers:
+        - text: ot
+          id: 21
+          _sprite: {fileID: 0}
+          texture2D: {fileID: 0}
+          audioClip: {fileID: 0}
+          image_url: 
+          audio_url: 
+      - question:
+          text: pat
+          id: 3
+          _sprite: {fileID: 0}
+          texture2D: {fileID: 0}
+          audioClip: {fileID: 0}
+          image_url: 
+          audio_url: 
+        answers:
+        - text: at
+          id: 31
+          _sprite: {fileID: 0}
+          texture2D: {fileID: 0}
+          audioClip: {fileID: 0}
+          image_url: 
+          audio_url: 
+      - question:
+          text: jet
+          id: 4
+          _sprite: {fileID: 0}
+          texture2D: {fileID: 0}
+          audioClip: {fileID: 0}
+          image_url: 
+          audio_url: 
+        answers:
+        - text: et
+          id: 41
+          _sprite: {fileID: 0}
+          texture2D: {fileID: 0}
+          audioClip: {fileID: 0}
+          image_url: 
+          audio_url: 
+      - question:
+          text: wet
+          id: 5
+          _sprite: {fileID: 0}
+          texture2D: {fileID: 0}
+          audioClip: {fileID: 0}
+          image_url: 
+          audio_url: 
+        answers:
+        - text: et
+          id: 51
+          _sprite: {fileID: 0}
+          texture2D: {fileID: 0}
+          audioClip: {fileID: 0}
+          image_url: 
+          audio_url: 
+      - question:
+          text: sit
+          id: 6
+          _sprite: {fileID: 0}
+          texture2D: {fileID: 0}
+          audioClip: {fileID: 0}
+          image_url: 
+          audio_url: 
+        answers:
+        - text: it
+          id: 61
+          _sprite: {fileID: 0}
+          texture2D: {fileID: 0}
+          audioClip: {fileID: 0}
+          image_url: 
+          audio_url: 
+      - question:
+          text: cut
+          id: 7
+          _sprite: {fileID: 0}
+          texture2D: {fileID: 0}
+          audioClip: {fileID: 0}
+          image_url: 
+          audio_url: 
+        answers:
+        - text: ut
+          id: 71
+          _sprite: {fileID: 0}
+          texture2D: {fileID: 0}
+          audioClip: {fileID: 0}
+          image_url: 
+          audio_url: 
+      - question:
+          text: hut
+          id: 8
+          _sprite: {fileID: 0}
+          texture2D: {fileID: 0}
+          audioClip: {fileID: 0}
+          image_url: 
+          audio_url: 
+        answers:
+        - text: ut
+          id: 81
+          _sprite: {fileID: 0}
+          texture2D: {fileID: 0}
+          audioClip: {fileID: 0}
+          image_url: 
+          audio_url: 
+      options:
+      - text: at
+        id: 1
+        _sprite: {fileID: 0}
+        texture2D: {fileID: 0}
+        audioClip: {fileID: 0}
+        image_url: 
+        audio_url: 
+      - text: et
+        id: 2
+        _sprite: {fileID: 0}
+        texture2D: {fileID: 0}
+        audioClip: {fileID: 0}
+        image_url: 
+        audio_url: 
+      - text: it
+        id: 3
+        _sprite: {fileID: 0}
+        texture2D: {fileID: 0}
+        audioClip: {fileID: 0}
+        image_url: 
+        audio_url: 
+      - text: ot
+        id: 4
+        _sprite: {fileID: 0}
+        texture2D: {fileID: 0}
+        audioClip: {fileID: 0}
+        image_url: 
+        audio_url: 
+      - text: ut
+        id: 5
+        _sprite: {fileID: 0}
+        texture2D: {fileID: 0}
+        audioClip: {fileID: 0}
+        image_url: 
+        audio_url: 
       additionalFields: []
     dynamicQA:
       questionType: 3

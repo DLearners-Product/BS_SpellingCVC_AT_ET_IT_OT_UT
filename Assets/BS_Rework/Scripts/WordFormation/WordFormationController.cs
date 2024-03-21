@@ -8,6 +8,7 @@ public class WordFormationController : MonoBehaviour
     public AudioSource activitySource;
     public int letterSetChildIndex;
     [SerializeField] private GameObject transitionEffect;
+    [SerializeField] private DotNavigation _dotnavigator;
     public GameObject G_final;
 
     private void Start() 
@@ -26,6 +27,7 @@ public class WordFormationController : MonoBehaviour
             letterSetChildIndex++;
             transitionEffect.SetActive(false);
             letterSetsHolder[letterSetChildIndex].gameObject.SetActive(true);
+            _dotnavigator.OnClickNextButton();
         }
         else
         {

@@ -17,6 +17,7 @@ public class slot_machine : MonoBehaviour
 
     public AudioSource audioSource;
     public AudioClip coinAudio;
+    public GameObject G_final;
 
     int count;
 
@@ -44,6 +45,7 @@ public class slot_machine : MonoBehaviour
         if (count == AllWords.Length)
         {
             Debug.Log("Game OVer");
+            G_final.SetActive(true);
             for (int i = 0; i < AllWords.Length; i++)
             {
                 AllWords[i].SetActive(false);
@@ -88,7 +90,6 @@ public class slot_machine : MonoBehaviour
 
             selectedGameObject.GetComponent<Button>().enabled = true;
             //selectedGameObject.SetActive(true);
-
 
             count++;
         }

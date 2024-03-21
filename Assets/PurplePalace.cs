@@ -20,6 +20,7 @@ public class PurplePalace : MonoBehaviour
     public AudioClip oopsAudio;
     public AudioClip slotfiip;
     public AudioClip flipaudio;
+    public GameObject g_final;
 
     int correctAnswerCount;
 
@@ -143,6 +144,7 @@ public class PurplePalace : MonoBehaviour
             if (correctAnswerCount == 5)
             {
                 Debug.Log("Game Over");
+                g_final.SetActive(true);
                 for (int i = 0; i < AllSlots.Length; i++)
                 {
                     AllSlots[i].SetActive(true);

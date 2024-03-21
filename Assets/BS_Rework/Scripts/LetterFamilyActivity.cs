@@ -22,6 +22,16 @@ public class LetterFamilyActivity : MonoBehaviour
     private GameObject selectedGameObject;
     [SerializeField] private Animator ballAnimator, ballAnimator_1;
 
+#region QA
+    private int qIndex, q1Index;
+    public GameObject questionGO;
+    public GameObject[] optionsGO;
+    public Dictionary<string, Component> additionalFields;
+    Component question;
+    Component[] options;
+    Component[] answers;
+#endregion
+
 
     private void Start() 
     {
@@ -31,6 +41,15 @@ public class LetterFamilyActivity : MonoBehaviour
         counterText.text = count + "/8";
         audioSource.clip = questionClips[index];
         answerParent.SetActive(false);
+#region DataSetter
+        Main_Blended.OBJ_main_blended.levelno = 7;
+        QAManager.instance.UpdateActivityQuestion();
+        qIndex = 0;
+        q1Index = 0;
+        GetData(qIndex);
+        GetAdditionalData();
+        AssignData();
+#endregion
     }
 
     public void QuestionAudioPlay()
@@ -48,7 +67,9 @@ public class LetterFamilyActivity : MonoBehaviour
         Debug.Log(selectedGameObject.name);
         if(wordFamilyName == selectedGameObject.name)
         {
-            Debug.Log("correct answer");
+            // Debug.Log("correct answer");
+            ScoreManager.instance.RightAnswer(q1Index, questionID: question.id, answerID: GetOptionID(selectedGameObject.name));
+            q1Index++;
             answerParent.SetActive(false);
             ballAnimator.SetTrigger("correct_trigger");
             audioSource.clip = correctAnsAudClip;
@@ -59,7 +80,8 @@ public class LetterFamilyActivity : MonoBehaviour
         }
         else
         {
-            Debug.Log("wrong answer");
+            // Debug.Log("wrong answer");
+            ScoreManager.instance.WrongAnswer(q1Index, questionID: question.id, answerID: GetOptionID(selectedGameObject.name));
             ballAnimator_1.SetTrigger("wrong_trigger");
             audioSource.clip = wrongAudClip;
             audioSource.Play();
@@ -87,6 +109,11 @@ public class LetterFamilyActivity : MonoBehaviour
         {
             index ++;
             count++;
+            if(qIndex < questionClips.Length-1)
+            {
+                qIndex++;
+                GetData(qIndex);
+            }
             counterText.text = count + "/8";
             audioSource.clip = questionClips[index];
         }
@@ -96,7 +123,63 @@ public class LetterFamilyActivity : MonoBehaviour
     {
         
         G_final.SetActive(true);
+        BlendedOperations.instance.NotifyActivityCompleted();
                 
     }
+
+#region QA
+    int GetOptionID(string selectedOption)
+    {
+        for (int i = 0; i < options.Length; i++)
+        {
+            if (options[i].text == selectedOption)
+            {
+                return options[i].id;
+            }
+        }
+        return -1;
+    }
+
+
+    bool CheckOptionIsAns(Component option)
+    {
+        for (int i = 0; i < answers.Length; i++)
+        {
+            if (option.text == answers[i].text) { return true; }
+        }
+        return false;
+    }
+
+    void GetData(int questionIndex)
+    {
+        //Debug.Log(">>>>>"+ qIndex);
+        question = QAManager.instance.GetQuestionAt(0, questionIndex);
+        //if(question != null){
+        options = QAManager.instance.GetOption(0, questionIndex);
+        answers = QAManager.instance.GetAnswer(0, questionIndex);
+        // }
+    }
+
+    void GetAdditionalData()
+    {
+        additionalFields = QAManager.instance.GetAdditionalField(0);
+    }
+
+    void AssignData()
+    {
+        // Custom code
+        for (int i = 0; i < optionsGO.Length; i++)
+        {
+            optionsGO[i].GetComponent<Image>().sprite = options[i]._sprite;
+            optionsGO[i].tag = "Untagged";
+            Debug.Log(optionsGO[i].name, optionsGO[i]);
+            if (CheckOptionIsAns(options[i]))
+            {
+                optionsGO[i].tag = "answer";
+            }
+        }
+        // answerCount.text = "/"+answers.Length;
+    }
+#endregion
 
 }

@@ -7,7 +7,7 @@ public class VowelSlide : MonoBehaviour
 {
     [SerializeField] private GameObject hand;
     private bool handShouldClose = false;
-    private bool isHandOpen, isLetterappeared = false;
+    private bool isHandOpen, isLetterappeared, isLetterClicked = false;
     [SerializeField] private List<GameObject> letterObjects;
     [SerializeField] private List<GameObject> vowelImages;
     [SerializeField] private List<string> letterDissapearAnimationTriggers;
@@ -124,6 +124,7 @@ public class VowelSlide : MonoBehaviour
             displayedImageIndex++;
             Debug.Log("display Index : " + displayedImageIndex);
         }
+        isLetterClicked = true;
         StartCoroutine(VowelImagesAppearRoutine(index));
         selectedObject = EventSystem.current.currentSelectedGameObject;
     }

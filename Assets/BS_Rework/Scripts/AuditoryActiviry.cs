@@ -22,6 +22,7 @@ public class AuditoryActiviry : MonoBehaviour
         countText.text = count + "/12";
         auditoryAS.clip = instructionClips[q_count];
         questionTexts[q_count].SetActive(true);
+        backButton.gameObject.SetActive(false);
     }
 
     public void OnSpeakerClick()
@@ -38,6 +39,7 @@ public class AuditoryActiviry : MonoBehaviour
         }
         else
         {
+            backButton.gameObject.SetActive(true);
             questionTexts[q_count].SetActive(false);
             q_count ++;
             count ++;
@@ -52,15 +54,18 @@ public class AuditoryActiviry : MonoBehaviour
         if(q_count <= 0)
         {
             q_count = 0;
+            backButton.gameObject.SetActive(false);
             count = 1;
             countText.text = count + "/12";
             auditoryAS.clip = instructionClips[q_count];
         }
         else
         {
+            questionTexts[q_count].SetActive(false);
             q_count --;
             count --;
             countText.text = count + "/12";
+            questionTexts[q_count].SetActive(true);
             auditoryAS.clip = instructionClips[q_count];
         }
     }
