@@ -51,21 +51,25 @@ public class AuditoryActiviry : MonoBehaviour
 
     public void BackButtonWork()
     {
-        if(q_count <= 0)
+        if(q_count > 1)
         {
-            q_count = 0;
-            backButton.gameObject.SetActive(false);
-            count = 1;
-            countText.text = count + "/12";
-            auditoryAS.clip = instructionClips[q_count];
-        }
-        else
-        {
+            // Debug.Log(q_count);
+            Debug.Log(q_count);
             questionTexts[q_count].SetActive(false);
             q_count --;
             count --;
             countText.text = count + "/12";
             questionTexts[q_count].SetActive(true);
+            auditoryAS.clip = instructionClips[q_count];
+        }
+        else
+        {
+            q_count = 0;
+            backButton.gameObject.SetActive(false);
+            questionTexts[q_count+1].SetActive(false);
+            questionTexts[q_count].SetActive(true);
+            count = 1;
+            countText.text = count + "/12";
             auditoryAS.clip = instructionClips[q_count];
         }
     }
